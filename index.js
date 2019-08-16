@@ -9,7 +9,7 @@ const path = require('path');
 app.use(express.static(path.join(__dirname, “client/build”)))
 
 const app = express();
-app.set('port', process.env.PORT || 8080);
+app.set('port', process.env.PORT || 3000);
 
 const SELECT_ALL = 'SELECT * FROM aws_matchuptable WHERE season=2018 AND week=10 AND franchise="Nick & Mickey";'
 
