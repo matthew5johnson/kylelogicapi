@@ -4,6 +4,10 @@ const mysql = require('mysql');
 
 require('dotenv').config();
 
+// Required for EC2 deployment
+const path = require('path');
+app.use(express.static(path.join(__dirname, “client/build”)))
+
 const app = express();
 app.set('port', process.env.PORT || 8080);
 
